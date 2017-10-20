@@ -1,11 +1,140 @@
 @import 'media';
+@main_color: #FFFFFF;
+@text_color: #cc0000;
+@border_color: #d9d9d4;
 
-// Код для примера
+*{
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
 body {
-    background: #ccc;
+    background-color: @main_color;
+    font-family: 'Roboto', sans-serif;
+}
+
+.header {
+    width: 1400px;
+    margin: 20px auto 19px auto;
+    height: 50px;
+    //border: 1px solid black;
+
+    &__list li {
+        float: left;
+    }
+
+    &__name {
+        font-size: 24px;
+        font-weight: bold;
+        color: #da6b6b;
+        padding-top: 10px;
+    }
+
+    &__logo {
+        margin-left: 570px;
+        margin-right: 459px;
+    }
+
+    &__phoneNumber {
+        font-size: 24px;
+        font-weight: bold;
+        color: @text_color;
+        padding-top: 10px;
+    }
 }
 
 .menu {
+    background-color: #f2f2ed;
+    color: @text_color;
+    border-top: 1px solid @border_color;
+    border-bottom: 1px solid @border_color;
+    height: 49px;
+    font-size: 16px;
+    width: auto;
+
+    &_wrapper {
+        width: 1400px;
+        margin: 0 auto;
+
+        li {
+            float: left;
+            margin-right: 20px;
+            padding-top: 15px;
+            a {
+                color: @text_color;
+            }
+
+            span {
+                color: black;
+                font-weight: bold;
+            }
+        }
+
+        li:last-child{
+            margin-right: 806px;
+        }
+
+        .menu__search {
+            height: 36px;
+            width: 276px;
+            border: 1px solid @border_color;
+            margin-top: 6px;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*.menu {
     margin: 0;
     padding: 0;
     text-align: center;
@@ -36,6 +165,6 @@ body {
     &_bottom &__link {
         color: #f00;
     }
-}
+}*/
 
 
