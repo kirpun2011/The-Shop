@@ -21,11 +21,8 @@ body {
     width: 1400px;
     margin: 20px auto 19px auto;
     height: 50px;
-    //border: 1px solid black;
-
-    &__list li {
-        float: left;
-    }
+    display: flex;
+    justify-content: space-between;
 
     &__name {
         font-size: 24px;
@@ -35,8 +32,8 @@ body {
     }
 
     &__logo {
-        margin-left: 570px;
-        margin-right: 459px;
+        //margin-left: 570px;
+
     }
 
     &__phoneNumber {
@@ -52,7 +49,7 @@ body {
     color: @text_color;
     border-top: 1px solid @border_color;
     border-bottom: 1px solid @border_color;
-    height: 49px;
+    height: 48px;
     font-size: 16px;
     width: auto;
 
@@ -74,15 +71,13 @@ body {
             }
         }
 
-        li:last-child{
-            margin-right: 806px;
-        }
-
         .menu__search {
             height: 36px;
             width: 276px;
             border: 1px solid @border_color;
             margin-top: 6px;
+            float: right;
+            cursor: pointer;
         }
     }
 }
@@ -102,69 +97,36 @@ body {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*.menu {
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    background: red; // red on small devices
-
-    @media @tablet {
-        background: green; // green on medium devices
-    }
-
-    @media @desktop {
-        background: blue; // blue on large devices
-    }
-
-    &__item {
-        display: inline-block;
-        list-style-type: none;
-    }
-
-    &__link {
-        color: #FFF;
-    }
-
-    // Bottom Menu
-    &_bottom { // BEM modifier example
-        background: green;
-    }
-
-    &_bottom &__link {
-        color: #f00;
-    }
-}*/
+//.menu {
+//    margin: 0;
+//    padding: 0;
+//    text-align: center;
+//
+//    @media @tablet {
+//
+//    }
+//
+//    @media @desktop {
+//
+//    }
+//
+//    &__item {
+//        display: inline-block;
+//        list-style-type: none;
+//    }
+//
+//    &__link {
+//        color: #FFF;
+//    }
+//
+//    // Bottom Menu
+//    &_bottom { // BEM modifier example
+//        background: green;
+//    }
+//
+//    &_bottom &__link {
+//        color: #f00;
+//    }
+//}
 
 
