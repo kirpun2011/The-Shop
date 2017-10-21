@@ -17,32 +17,56 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+
+/// HEADER BLOCK
+
 .header {
-    width: 1400px;
+    max-width: 1400px;
     margin: 20px auto 19px auto;
     height: 50px;
     display: flex;
     justify-content: space-between;
 
-    &__name {
+    .header__name {
         font-size: 24px;
         font-weight: bold;
         color: #da6b6b;
         padding-top: 10px;
     }
 
-    &__logo {
-        //margin-left: 570px;
-
-    }
-
-    &__phoneNumber {
+    .header__phoneNumber {
         font-size: 24px;
         font-weight: bold;
         color: @text_color;
         padding-top: 10px;
     }
+
+    @media screen and (max-width: 1500px){
+        .header__name {
+            margin-left: 35px;
+        }
+
+        .header__phoneNumber {
+            margin-right: 35px;
+        }
+    }
+
+    @media screen and (max-width: 480px){
+        margin: 10px auto 0 auto;
+        .header__name, .header__phoneNumber {
+            font-size: 18px;
+        }
+        img {
+            height: 40px;
+        }
+    }
+
+    @media screen and (max-width: 380px){
+        min-width: 380px;
+    }
 }
+
+/// MENU BLOCK
 
 .menu {
     background-color: #f2f2ed;
@@ -51,10 +75,10 @@ body {
     border-bottom: 1px solid @border_color;
     height: 48px;
     font-size: 16px;
-    width: auto;
+    //width: auto;
 
     &_wrapper {
-        width: 1400px;
+        max-width: 1400px;
         margin: 0 auto;
 
         li {
@@ -70,14 +94,44 @@ body {
                 font-weight: bold;
             }
         }
+    }
+
+    .menu__search {
+        height: 36px;
+        width: 276px;
+        border: 1px solid @border_color;
+        margin-top: 6px;
+        float: right;
+        cursor: pointer;
+    }
+
+    @media screen and (max-width: 1500px){
+        .menu__search {
+            margin-right: 35px;
+        }
+
+        .current-link {
+            margin-left: 35px;
+        }
+    }
+
+    @media screen and (max-width: 690px){
+        height: 90px;
+    }
+
+    @media screen and (max-width: 380px){
+        min-width: 380px;
 
         .menu__search {
-            height: 36px;
-            width: 276px;
-            border: 1px solid @border_color;
-            margin-top: 6px;
-            float: right;
-            cursor: pointer;
+            margin-right: 55px;
+        }
+
+            .current-link  {
+            margin-left: 25px;
+        }
+
+        li:last-child {
+            margin-right: 25px;
         }
     }
 }

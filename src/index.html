@@ -10,26 +10,25 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
+    <div class="header">
         <div class="header__name">7h3 5h0p</div>
-        <div class="header__logo">
-            <a href="index.html"><img src="img/oggetto_logo.svg" alt="" height="50px"></a>
-        </div>
+        <div><img src="img/oggetto_logo.svg" alt="" height="50px"></a></div>
         <div class="header__phoneNumber">+7 (812) 2•12•85•06</div>
-    </header>
+    </div>
 
     <main>
         <div class="menu">
             <div class="menu_wrapper">
-                <ul>
-                    <li><span>LISP</span></li>
-                    <li><a href="">OCaml</a></li>
-                    <li><a href="">JavaScript</a></li>
-                    <li><a href="">Python</a></li>
-                    <li><a href="">PHP</a></li>
-                </ul>
-
-                <input class="menu__search" type="search">
+                <div class="menu_list">
+                    <ul>
+                        <li><span class="current-link">LISP</span></li>
+                        <li><a href="">OCaml</a></li>
+                        <li><a href="">JavaScript</a></li>
+                        <li><a href="">Python</a></li>
+                        <li><a href="">PHP</a></li>
+                    </ul>
+                </div>
+                <input class="menu__search search__650px" type="search">
             </div>
         </div>
     </main>
