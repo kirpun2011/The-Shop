@@ -28,14 +28,14 @@ body {
     display: flex;
     justify-content: space-between;
 
-    .header__name {
+    &__name {
         font-size: 24px;
         font-weight: bold;
         color: #da6b6b;
         padding-top: 10px;
     }
 
-    .header__phoneNumber {
+    &__phoneNumber {
         font-size: 24px;
         font-weight: bold;
         color: @text_color;
@@ -43,18 +43,18 @@ body {
     }
 
     @media screen and (max-width: 1500px){
-        .header__name {
+        &__name {
             margin-left: 35px;
         }
 
-        .header__phoneNumber {
+        &__phoneNumber {
             margin-right: 35px;
         }
     }
 
     @media screen and (max-width: 480px){
         margin: 10px auto 0 auto;
-        .header__name, .header__phoneNumber {
+        &__name, &__phoneNumber {
             font-size: 18px;
         }
         img {
@@ -76,7 +76,6 @@ body {
     border-bottom: 1px solid @border_color;
     height: 48px;
     font-size: 16px;
-    //width: auto;
 
     &_wrapper {
         max-width: 1400px;
@@ -86,24 +85,22 @@ body {
             float: left;
             margin-right: 20px;
             padding-top: 15px;
-            a {
-                color: @text_color;
-            }
+            a { color: @text_color; }
 
-            span {
+            .current-link {
                 color: black;
                 font-weight: bold;
             }
         }
-    }
 
-    .menu__search {
-        height: 36px;
-        width: 276px;
-        border: 1px solid @border_color;
-        margin-top: 6px;
-        float: right;
-        cursor: pointer;
+        .menu__search {
+            height: 36px;
+            width: 276px;
+            border: 1px solid @border_color;
+            margin-top: 6px;
+            float: right;
+            cursor: pointer;
+        }
     }
 
     @media screen and (max-width: 1500px){
@@ -122,18 +119,54 @@ body {
 
     @media screen and (max-width: 380px){
         min-width: 380px;
+    }
+}
 
-        .menu__search {
-            margin-right: 55px;
-        }
+/// MAIN CONTENT
 
-            .current-link  {
-            margin-left: 25px;
-        }
+.product {
+    max-width: 1400px;
+    margin: 0 auto;
+}
 
-        li:last-child {
-            margin-right: 25px;
+.product-photo {
+    width:700px;
+    float:left;
+    margin-top: 50px;
+
+    .current_directory {
+        a {
+            color: @text_color;
         }
+    }
+
+    .photo {
+        margin-top: 20px;
+    }
+}
+
+.product-description {
+    width: 700px - 65;
+    float:left;
+    margin-left: 65px;
+    margin-top: 86px;
+
+    h1 {
+        font-size: 36px;
+        font-weight: bold;
+    }
+
+    h4 {
+        font-weight: normal;
+        font-style: 16px;
+        display: block;
+        margin-top: 16px;
+    }
+
+    .product-description_price {
+        color: @text_color;
+        display: block;
+        margin-top: 33px;
     }
 }
 
@@ -149,39 +182,5 @@ body {
 
 
 
-
-
-
-//.menu {
-//    margin: 0;
-//    padding: 0;
-//    text-align: center;
-//
-//    @media @tablet {
-//
-//    }
-//
-//    @media @desktop {
-//
-//    }
-//
-//    &__item {
-//        display: inline-block;
-//        list-style-type: none;
-//    }
-//
-//    &__link {
-//        color: #FFF;
-//    }
-//
-//    // Bottom Menu
-//    &_bottom { // BEM modifier example
-//        background: green;
-//    }
-//
-//    &_bottom &__link {
-//        color: #f00;
-//    }
-//}
 
 
