@@ -35,9 +35,11 @@
         <div class="product">
             <div class="product-photo">
                 <span class="current_directory"><a href="">LISP</a> / <a href="">Одежда</a></span> / Футболки
-                <img src="img/tshirts/tshirt_white.jpg" class="Color_one photo" alt="white-tshirt" width="700px">
-                <img src="img/tshirts/tshirt_yellow.jpg" class="Color_two_invisible photo" width="700px"></img>
-                <img src="img/tshirts/tshirt_green.jpg" class="Color_three_invisible photo" width="700px"></img>
+                <div>
+                    <img id="tshirtOne" src="img/tshirts/tshirt_white.jpg" class="photo photo_one" width="700px">
+                    <img id="tshirtTwo" src="img/tshirts/tshirt_yellow.jpg" class="photo photo_two_invisible" width="700px"></img>
+                    <img id="tshirtThree" src="img/tshirts/tshirt_green.jpg" class="photo photo_three_invisible" width="700px"></img>
+                </div>
             </div>
 
             <div class="product-description">
@@ -47,36 +49,60 @@
 
                 <h4 class="size-name">Размер:</h4>
                 <div class="size_line_block">
-                    <div class="size_S size_style">
+                    <div id="sizeS" class="size_style size_S">
                         <div>S</div>
                     </div>
-                    <div class="size_M size_style active">
+                    <div id="sizeM" class="size_style size_M active">
                         <div>M</div>
                     </div>
-                    <div class="size_L size_style">
+                    <div id="sizeL" class="size_style size_L">
                         <div>L</div>
                     </div>
                 </div>
 
                 <h4 class="color-name">Цвет:</h4>
 
-                <div class="color_line_block">
-                    <div class="color_style color_one active"> </div>
-                    <div class="color_style color_two"> </div>
-                    <div class="color_style color_three"> </div>
+                <div>
+                    <div id="color_white" class="color_one active"> </div>
+                    <div id="color_yellow" class="color_two"> </div>
+                    <div id="color_green" class="color_three"> </div>
                 </div>
 
                 <input type="button" value="Купить">
 
                 <div class="for-future">
-                    <a href=""><img class="heart-svg1" src="img/icons/heart2.svg" alt="heart" height="25"></a>
+                    <a href=""><img class="heart-svg1" src="img/icons/heart2.svg" alt="heart" height="25px"></a>
                     <a href="">Отложить на потом</a>
                 </div>
             </div>
         </div>
     </main>
 
-    <footer class="footer">
+    <footer>
+        <div class="footer_wrapper">
+            <!--<div class="service">-->
+                <!--<h3 class="name_service">Сервис и поддержка</h3>-->
+                <!--<ul>-->
+                    <!--<li>Как сделать заказ</li>-->
+                    <!--<li>Возврат товара</li>-->
+                    <!--<li>Публичная оферта</li>-->
+                    <!--<li>Доставка</li>-->
+                    <!--<li>Способы оплаты</li>-->
+                    <!--<li>Правила продажи</li>-->
+                    <!--<li>Возврат денежных средств</li>-->
+                    <!--<li>Вопросы и ответы</li>-->
+                <!--</ul>-->
+            <!--</div>-->
+            <div class="about">
+
+            </div>
+            <div class="features">
+
+            </div>
+            <div class="icons">
+
+            </div>
+        </div>
     </footer>
 
     <script src="js/scripts.js"></script>
