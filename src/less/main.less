@@ -1,8 +1,8 @@
 @import 'media';
 @import (less) '../../node_modules/normalize.css/normalize.css';
 
-@main_color: #FFFFFF;
-@text_color: #cc0000;
+@main_color: #FFF;
+@text_color: #c00;
 @border_color: #d9d9d4;
 
 *{
@@ -16,15 +16,14 @@ ul {
 
 body {
     background-color: @main_color;
-    font-family: 'Roboto', sans-serif;
+    font-family: Roboto, sans-serif;
 }
 
 
 /// HEADER BLOCK
-
 .header {
     max-width: 1400px;
-    margin: 20px auto 19px auto;
+    margin: 20px auto 19px;
     height: 50px;
     display: flex;
     justify-content: space-between;
@@ -55,11 +54,14 @@ body {
     }
 
     @media screen and (max-width: 480px){
-        margin: 10px auto 0 auto;
-        &__name, &__phoneNumber {
+        margin: 10px auto 0;
+
+        &__name,
+        &__phoneNumber {
             font-size: 18px;
         }
-        img {
+
+        &__img {
             height: 40px;
         }
     }
@@ -70,7 +72,6 @@ body {
 }
 
 /// MENU BLOCK
-
 .menu {
     background-color: #f2f2ed;
     color: @text_color;
@@ -79,7 +80,7 @@ body {
     height: 48px;
     font-size: 16px;
 
-    &_wrapper {
+    &__wrapper {
         max-width: 1400px;
         margin: 0 auto;
 
@@ -87,7 +88,10 @@ body {
             float: left;
             margin-right: 20px;
             padding-top: 15px;
-            a { color: @text_color; }
+
+            .link {
+                color: @text_color;
+            }
 
             .current-link {
                 color: black;
@@ -105,6 +109,7 @@ body {
         }
     }
 
+    // МЕДИА НА ШАПКУ
     @media screen and (max-width: 1500px){
         .menu__search {
             margin-right: 35px;
@@ -126,213 +131,184 @@ body {
 
 /// MAIN CONTENT
 
+// ПРОДУКТ
 .product {
     max-width: 1400px;
     margin: 0 auto;
-}
 
-.product-photo {
-    width:700px;
-    float:left;
-    margin-top: 50px;
+    // ФОТО И ТЕКУЩАЯ СТРАНИЦА
+    &__photo {
+        width: 50%;
+        float: left;
+        margin-top: 50px;
 
-    .current_directory {
-        a {
-            color: @text_color;
+        // ТЕКУЩАЯ СТРАНИЦА
+        .current_directory {
+            a {
+                color: @text_color;
+            }
+        }
+
+        // ФОТО
+        .photo {
+            margin-top: 20px;
+            position: absolute;
+
+            &_three_invisible,
+            &_two_invisible,
+            &_one_invisible {
+                opacity: 0;
+            }
+
+            &_three,
+            &_two,
+            &_one {
+                opacity: 1;
+            }
         }
     }
 
-    .photo {
-        margin-top: 20px;
-        position: absolute;
-    }
-}
+    // ОПИСАНИЕ
+    &__description {
+        width: 45%;
+        float: left;
+        margin-left: 5%;
+        margin-top: 86px;
 
-.photo_three_invisible {
-    opacity: 0;
-}
+        // НАЗВАНИЕ ПРОДУКТА
+        &_name {
+            font-size: 36px;
+            font-weight: bold;
+            margin-top: 0;
+        }
 
-.photo_three {
-    opacity: 1;
-}
+        // СОСТАВ
+        &_consist {
+            font-weight: normal;
+            font-size: 16px;
+            display: block;
+            margin-top: 16px;
+        }
 
-.photo_two_invisible {
-    opacity: 0;
-}
-
-.photo_two {
-    opacity: 1;
-}
-
-.photo_one_invisible {
-    opacity: 0;
-}
-
-.photo_one {
-    opacity: 1;
-}
-
-.product-description {
-    width: 700px - 65;
-    float:left;
-    margin-left: 65px;
-    margin-top: 86px;
-}
-
-h1 {
-    font-size: 36px;
-    font-weight: bold;
-    margin-top: 0;
-}
-
-h4 {
-    font-weight: normal;
-    font-size: 16px;
-    display: block;
-    margin-top: 16px;
-}
-
-.product-description_price {
-    color: @text_color;
-    display: block;
-    margin-top: 33px;
-    margin-bottom: 36px;
-}
-
-.size-name {
-    display: block;
-    margin-bottom: 16px;
-}
-
-.size_style{
-    text-align: center;
-    height: 63px;
-    width: 63px;
-    border: 1px solid black;
-    background: white;
-    margin-right: 10px;
-    font-size: 36px;
-    line-height: 63px;
-    float: left;
-    cursor: pointer;
-}
-
-.size_S.active {
-    text-align: center;
-    height: 59px;
-    width: 59px;
-    border: 3px solid red;
-    background: white;
-    margin-right: 10px;
-}
-
-.size_M.active {
-    text-align: center;
-    height: 59px;
-    width: 59px;
-    border: 3px solid red;
-    background: white;
-    margin-right: 10px;
-}
-
-.size_L.active {
-    text-align: center;
-    height: 59px;
-    width: 59px;
-    border: 3px solid red;
-    background: white;
-    margin-right: 10px;
-}
-
-.color-name {
-    display: block;
-    margin-bottom: 16px;
-    clear: left;
-    margin-top: 116px;
-}
-
-.color_one {
-    background: white;
-    text-align: center;
-    height: 63px;
-    width: 63px;
-    border: 1px solid black;
-    margin-right: 10px;
-    float: left;
-    cursor: pointer;
-}
-
-.color_two {
-    background: #e3d95e;
-    text-align: center;
-    height: 63px;
-    width: 63px;
-    border: 1px solid black;
-    margin-right: 10px;
-    float: left;
-    cursor: pointer;
-}
-
-.color_three {
-    background: #a5af96;
-    text-align: center;
-    height: 63px;
-    width: 63px;
-    border: 1px solid black;
-    margin-right: 10px;
-    float: left;
-    cursor: pointer;
-}
-
-.color_one.active {
-    height: 59px;
-    width: 59px;
-    border: 3px solid red;
-}
-
-.color_two.active {
-    height: 59px;
-    width: 59px;
-    border: 3px solid red;
-}
-
-.color_three.active {
-    height: 59px;
-    width: 59px;
-    border: 3px solid red;
-}
-
-input[type="button"] {
-    display: block;
-    margin-top: 123px;
-    height: 79px;
-    width: 202px;
-    color: @main_color;
-    background-color: @text_color;
-    border: none;
-    cursor: pointer;
-
-    &:hover {
-        background: lighten(@text_color, 15%);
-    }
-}
-
-.for-future{
-    .heart-svg1 {
-        margin-top: 39px;
-        margin-bottom: -7px;
-        margin-right: 6px;
+        // ЦЕНА
+        &_price {
+            color: @text_color;
+            display: block;
+            margin-top: 33px;
+            margin-bottom: 36px;
+        }
     }
 
-    a {
-        color: #999999;
-        font-size: 16px;
-        display: inline-block;
+    // РАЗМЕР
+    .size {
+        cursor: pointer;
+
+        &__name {
+            display: block;
+            margin-bottom: 16px;
+            font-weight: normal;
+            cursor: auto;
+        }
+
+        &_style {
+            text-align: center;
+            height: 63px;
+            width: 63px;
+            border: 1px solid black;
+            background: white;
+            margin-right: 10px;
+            font-size: 36px;
+            line-height: 63px;
+            float: left;
+        }
+
+        &_S.active,
+        &_M.active,
+        &_L.active {
+            height: 59px;
+            width: 59px;
+            border: 3px solid red;
+            line-height: 59px;
+        }
+    }
+
+    // ЦВЕТ
+    .color {
+        &__name {
+            display: block;
+            margin-bottom: 16px;
+            clear: left;
+            margin-top: 116px;
+            font-weight: normal;
+            cursor: auto;
+        }
+
+        &_one,
+        &_two,
+        &_three {
+            text-align: center;
+            height: 63px;
+            width: 63px;
+            border: 1px solid black;
+            margin-right: 10px;
+            float: left;
+            cursor: pointer;
+        }
+
+        &_one {
+            background: white;
+        }
+
+        &_two {
+            background: #e3d95e;
+        }
+
+        &_three {
+            background: #a5af96;
+        }
+
+        &_one.active,
+        &_two.active,
+        &_three.active {
+            height: 59px;
+            width: 59px;
+            border: 3px solid red;
+        }
+    }
+
+    // КНОПКА
+    input[type='button'] {
+        display: block;
+        margin-top: 123px;
+        height: 79px;
+        width: 202px;
+        color: @main_color;
+        background-color: @text_color;
+        border: none;
+        cursor: pointer;
+
+        &:hover {
+            background: lighten(@text_color, 15%);
+        }
+    }
+
+    // ОТЛОЖИТЬ НА ПОТОМ
+    .for-future{
+        .heart-svg1 {
+            margin-top: 39px;
+            margin-bottom: -7px;
+            margin-right: 6px;
+        }
+
+        a {
+            color: #999;
+            font-size: 16px;
+            display: inline-block;
+        }
     }
 }
 
 // footer
-
 footer {
     background-color: #f2f2ed;
     color: black;
@@ -341,17 +317,16 @@ footer {
     clear: both;
     border-top: 1px solid @border_color;
     margin-top: 910px;
-}
 
-.footer_wrapper {
-    max-width: 1400px;
-    margin: 0 auto;
+    .footer {
+        max-width: 1400px;
+        margin: 0 auto;
+    }
 }
 
 .service {
     width: 430px;
     float: left;
-    //background-color: fuchsia;
     margin-top: 62px;
     margin-bottom: 54px;
 }
@@ -376,7 +351,6 @@ footer {
 .about {
     width: 276px;
     float: left;
-    //background-color: cornflowerblue;
     margin-top: 62px;
 }
 
@@ -399,7 +373,6 @@ footer {
 .features {
     width: 424px;
     float: left;
-    //background-color: gold;
     margin-top: 62px;
     padding-left: 233px;
 }
@@ -412,7 +385,7 @@ footer {
 
 .icon1::before {
     content: '';
-    background: url("../img/icons/delivery.svg") no-repeat;
+    background: url('../img/icons/delivery.svg') no-repeat;
     transform: translateX(-55px) translateY(18px);
     display: block;
     height: 23px;
@@ -420,7 +393,7 @@ footer {
 
 .icon2::before {
     content: '';
-    background: url("../img/icons/heart.svg") no-repeat;
+    background: url('../img/icons/heart.svg') no-repeat;
     transform: translateX(-35px) translateY(19px);
     display: block;
     height: 23px;
@@ -428,7 +401,7 @@ footer {
 
 .icon3::before {
     content: '';
-    background: url("../img/icons/cup.svg") no-repeat;
+    background: url('../img/icons/cup.svg') no-repeat;
     transform: translateX(-30px) translateY(19px);
     display: block;
     height: 23px;
@@ -438,7 +411,6 @@ footer {
     width: 37px;
     float: left;
     margin-top: 62px;
-    //background-color: green;
 }
 
 .socialIcon {
@@ -465,15 +437,4 @@ footer {
     border-top: 1px solid @border_color;
     padding-top: 34px;
     font-size: 14px;
-    //background-color: gold;
 }
-
-
-
-
-
-
-
-
-
-

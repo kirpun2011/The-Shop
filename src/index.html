@@ -12,20 +12,20 @@
 <body>
     <div class="header">
         <div class="header__name">7h3 5h0p</div>
-        <div><img src="img/oggetto_logo.svg" alt="" height="50px"></a></div>
+        <div><img class="header__img" src="img/oggetto_logo.svg" alt="" height="50px"></a></div>
         <div class="header__phoneNumber">+7 (812) 2•12•85•06</div>
     </div>
 
     <main>
         <div class="menu">
-            <div class="menu_wrapper">
-                <div class="menu_list">
+            <div class="menu__wrapper">
+                <div class="menu__list">
                     <ul>
                         <li><span class="current-link">LISP</span></li>
-                        <li><a href="">OCaml</a></li>
-                        <li><a href="">JavaScript</a></li>
-                        <li><a href="">Python</a></li>
-                        <li><a href="">PHP</a></li>
+                        <li><a class="link" href="">OCaml</a></li>
+                        <li><a class="link" href="">JavaScript</a></li>
+                        <li><a class="link" href="">Python</a></li>
+                        <li><a class="link" href="">PHP</a></li>
                     </ul>
                 </div>
                 <input class="menu__search search__650px" type="search">
@@ -33,53 +33,57 @@
         </div>
 
         <div class="product">
-            <div class="product-photo">
+            <div class="product__photo">
                 <span class="current_directory"><a href="">LISP</a> / <a href="">Одежда</a></span> / Футболки
-                <div>
+                <div class="shirt1">
                     <img id="tshirtOne" src="img/tshirts/tshirt_white.jpg" class="photo photo_one" width="700px">
                     <img id="tshirtTwo" src="img/tshirts/tshirt_yellow.jpg" class="photo photo_two_invisible" width="700px"></img>
                     <img id="tshirtThree" src="img/tshirts/tshirt_green.jpg" class="photo photo_three_invisible" width="700px"></img>
                 </div>
             </div>
 
-            <div class="product-description">
-                <h1>Футболка Alien technology</h1>
-                <h4>Состав: 100% хлопок, динамическая типизация, польская нотация. Производство: Россия.</h4>
-                <h1 class="product-description_price">1500&#8381</h1>
+            <div class="product__description">
+                <h1 class="product__description_name">Футболка Alien technology</h1>
+                <h4 class="product__description_consist">Состав: 100% хлопок, динамическая типизация, польская нотация. Производство: Россия.</h4>
+                <h1 class="product__description_price">1500&#8381</h1>
 
-                <h4 class="size-name">Размер:</h4>
-                <div class="size_line_block">
-                    <div id="sizeS" class="size_style size_S">
-                        <div>S</div>
-                    </div>
-                    <div id="sizeM" class="size_style size_M active">
-                        <div>M</div>
-                    </div>
-                    <div id="sizeL" class="size_style size_L">
-                        <div>L</div>
+                <div class="size">
+                    <h4 class="size__name">Размер:</h4>
+                    <div class="size__lineBlock">
+                        <div id="sizeS" class="size_style size_S">
+                            <div>S</div>
+                        </div>
+                        <div id="sizeM" class="size_style size_M active">
+                            <div>M</div>
+                        </div>
+                        <div id="sizeL" class="size_style size_L">
+                            <div>L</div>
+                        </div>
                     </div>
                 </div>
 
-                <h4 class="color-name">Цвет:</h4>
+                <div class="color">
+                    <h4 class="color__name">Цвет:</h4>
 
-                <div>
-                    <div id="color_white" class="color_one active"> </div>
-                    <div id="color_yellow" class="color_two"> </div>
-                    <div id="color_green" class="color_three"> </div>
-                </div>
+                    <div>
+                        <div id="color_white" class="color_one active"> </div>
+                        <div id="color_yellow" class="color_two"> </div>
+                        <div id="color_green" class="color_three"> </div>
+                    </div>
 
-                <input type="button" value="Купить">
+                    <input type="button" value="Купить">
 
-                <div class="for-future">
-                    <a href=""><img class="heart-svg1" src="img/icons/heart2.svg" alt="heart" height="25px"></a>
-                    <a href="">Отложить на потом</a>
+                    <div class="for-future">
+                        <a href=""><img class="heart-svg1" src="img/icons/heart2.svg" alt="heart" height="25px"></a>
+                        <a href="">Отложить на потом</a>
+                    </div>
                 </div>
             </div>
         </div>
     </main>
 
     <footer>
-        <div class="footer_wrapper">
+        <div class="footer">
             <div class="service">
                 <h3 class="name_service_about">Сервис и поддержка</h3>
                 <ul>
