@@ -1,0 +1,440 @@
+@import 'media';
+@import (less) '../../node_modules/normalize.css/normalize.css';
+
+@main_color: #FFF;
+@text_color: #c00;
+@border_color: #d9d9d4;
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    background-color: @main_color;
+    font-family: Roboto, sans-serif;
+}
+
+
+/// HEADER BLOCK
+.header {
+    max-width: 1400px;
+    margin: 20px auto 19px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+
+    &__name {
+        font-size: 24px;
+        font-weight: bold;
+        color: #da6b6b;
+        padding-top: 10px;
+        margin-right: 110px;
+    }
+
+    &__phoneNumber {
+        font-size: 24px;
+        font-weight: bold;
+        color: @text_color;
+        padding-top: 10px;
+    }
+
+    @media screen and (max-width: 1500px){
+        &__name {
+            margin-left: 35px;
+        }
+
+        &__phoneNumber {
+            margin-right: 35px;
+        }
+    }
+
+    @media screen and (max-width: 480px){
+        margin: 10px auto 0;
+
+        &__name,
+        &__phoneNumber {
+            font-size: 18px;
+        }
+
+        &__img {
+            height: 40px;
+        }
+    }
+
+    @media screen and (max-width: 380px){
+        min-width: 380px;
+    }
+}
+
+/// MENU BLOCK
+.menu {
+    background-color: #f2f2ed;
+    color: @text_color;
+    border-top: 1px solid @border_color;
+    border-bottom: 1px solid @border_color;
+    height: 48px;
+    font-size: 16px;
+
+    &__wrapper {
+        max-width: 1400px;
+        margin: 0 auto;
+
+        li {
+            float: left;
+            margin-right: 20px;
+            padding-top: 15px;
+
+            .link {
+                color: @text_color;
+            }
+
+            .current-link {
+                color: black;
+                font-weight: bold;
+            }
+        }
+
+        .menu__search {
+            height: 36px;
+            width: 276px;
+            border: 1px solid @border_color;
+            margin-top: 6px;
+            float: right;
+            cursor: pointer;
+        }
+    }
+
+    // МЕДИА НА ШАПКУ
+    @media screen and (max-width: 1500px){
+        .menu__search {
+            margin-right: 35px;
+        }
+
+        .current-link {
+            margin-left: 35px;
+        }
+    }
+
+    @media screen and (max-width: 690px){
+        height: 90px;
+    }
+
+    @media screen and (max-width: 380px){
+        min-width: 380px;
+    }
+}
+
+/// MAIN CONTENT
+
+// ПРОДУКТ
+.product {
+    max-width: 1400px;
+    margin: 0 auto;
+
+    // ФОТО И ТЕКУЩАЯ СТРАНИЦА
+    &__photo {
+        width: 50%;
+        float: left;
+        margin-top: 50px;
+
+        // ТЕКУЩАЯ СТРАНИЦА
+        .current_directory {
+            a {
+                color: @text_color;
+            }
+        }
+
+        // ФОТО
+        .photo {
+            margin-top: 20px;
+            position: absolute;
+
+            &_three_invisible,
+            &_two_invisible,
+            &_one_invisible {
+                opacity: 0;
+            }
+
+            &_three,
+            &_two,
+            &_one {
+                opacity: 1;
+            }
+        }
+    }
+
+    // ОПИСАНИЕ
+    &__description {
+        width: 45%;
+        float: left;
+        margin-left: 5%;
+        margin-top: 86px;
+
+        // НАЗВАНИЕ ПРОДУКТА
+        &_name {
+            font-size: 36px;
+            font-weight: bold;
+            margin-top: 0;
+        }
+
+        // СОСТАВ
+        &_consist {
+            font-weight: normal;
+            font-size: 16px;
+            display: block;
+            margin-top: 16px;
+        }
+
+        // ЦЕНА
+        &_price {
+            color: @text_color;
+            display: block;
+            margin-top: 33px;
+            margin-bottom: 36px;
+        }
+    }
+
+    // РАЗМЕР
+    .size {
+        cursor: pointer;
+
+        &__name {
+            display: block;
+            margin-bottom: 16px;
+            font-weight: normal;
+            cursor: auto;
+        }
+
+        &_style {
+            text-align: center;
+            height: 63px;
+            width: 63px;
+            border: 1px solid black;
+            background: white;
+            margin-right: 10px;
+            font-size: 36px;
+            line-height: 63px;
+            float: left;
+        }
+
+        &_S.active,
+        &_M.active,
+        &_L.active {
+            height: 59px;
+            width: 59px;
+            border: 3px solid red;
+            line-height: 59px;
+        }
+    }
+
+    // ЦВЕТ
+    .color {
+        &__name {
+            display: block;
+            margin-bottom: 16px;
+            clear: left;
+            margin-top: 116px;
+            font-weight: normal;
+            cursor: auto;
+        }
+
+        &_one,
+        &_two,
+        &_three {
+            text-align: center;
+            height: 63px;
+            width: 63px;
+            border: 1px solid black;
+            margin-right: 10px;
+            float: left;
+            cursor: pointer;
+        }
+
+        &_one {
+            background: white;
+        }
+
+        &_two {
+            background: #e3d95e;
+        }
+
+        &_three {
+            background: #a5af96;
+        }
+
+        &_one.active,
+        &_two.active,
+        &_three.active {
+            height: 59px;
+            width: 59px;
+            border: 3px solid red;
+        }
+    }
+
+    // КНОПКА
+    input[type='button'] {
+        display: block;
+        margin-top: 123px;
+        height: 79px;
+        width: 202px;
+        color: @main_color;
+        background-color: @text_color;
+        border: none;
+        cursor: pointer;
+
+        &:hover {
+            background: lighten(@text_color, 15%);
+        }
+    }
+
+    // ОТЛОЖИТЬ НА ПОТОМ
+    .for-future{
+        .heart-svg1 {
+            margin-top: 39px;
+            margin-bottom: -7px;
+            margin-right: 6px;
+        }
+
+        a {
+            color: #999;
+            font-size: 16px;
+            display: inline-block;
+        }
+    }
+}
+
+// footer
+footer {
+    background-color: #f2f2ed;
+    color: black;
+    font-size: 16px;
+    height: 429px;
+    clear: both;
+    border-top: 1px solid @border_color;
+    margin-top: 910px;
+
+    .footer {
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+}
+
+.service {
+    width: 430px;
+    float: left;
+    margin-top: 62px;
+    margin-bottom: 54px;
+}
+
+.name_service_about {
+    display: block;
+    margin-bottom: 25px;
+    font-size: 16px;
+}
+
+.service li {
+    display: block;
+    margin-bottom: 13px;
+    font-size: 14px;
+}
+
+.firstListService {
+    float: left;
+    margin-right: 54px;
+}
+
+.about {
+    width: 276px;
+    float: left;
+    margin-top: 62px;
+}
+
+.firstListAbout {
+    float: left;
+    margin-right: 103px;
+}
+
+.about li {
+    display: block;
+    margin-bottom: 13px;
+    font-size: 14px;
+}
+
+.about li a {
+    color: black;
+    text-decoration: none;
+}
+
+.features {
+    width: 424px;
+    float: left;
+    margin-top: 62px;
+    padding-left: 233px;
+}
+
+.features li {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 11px;
+}
+
+.icon1::before {
+    content: '';
+    background: url('../img/icons/delivery.svg') no-repeat;
+    transform: translateX(-55px) translateY(18px);
+    display: block;
+    height: 23px;
+}
+
+.icon2::before {
+    content: '';
+    background: url('../img/icons/heart.svg') no-repeat;
+    transform: translateX(-35px) translateY(19px);
+    display: block;
+    height: 23px;
+}
+
+.icon3::before {
+    content: '';
+    background: url('../img/icons/cup.svg') no-repeat;
+    transform: translateX(-30px) translateY(19px);
+    display: block;
+    height: 23px;
+}
+
+.icons {
+    width: 37px;
+    float: left;
+    margin-top: 62px;
+}
+
+.socialIcon {
+    height: 30px;
+}
+
+.socialIcon.facebook {
+    margin-left: 8px;
+    margin-bottom: 23px;
+}
+
+.socialIcon.twitter {
+    margin-bottom: 22px;
+}
+
+.socialIcon.instagram {
+    margin-left: 3px;
+}
+
+.rights {
+    clear: both;
+    width: 1400px;
+    margin: 0 auto;
+    border-top: 1px solid @border_color;
+    padding-top: 34px;
+    font-size: 14px;
+}
