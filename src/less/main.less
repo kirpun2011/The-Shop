@@ -28,11 +28,11 @@ body {
     display: flex;
     justify-content: space-between;
 
-    &__name {
-        font-size: 24px;
-        font-weight: bold;
-        color: #da6b6b;
-        padding-top: 10px;
+    .shop-logo {
+        width: 104px;
+        height: 22px;
+        background: url(../img/the_shop_logo.svg) no-repeat center;
+        margin-top: 15px;
         margin-right: 110px;
     }
 
@@ -44,7 +44,7 @@ body {
     }
 
     @media screen and (max-width: 1500px){
-        &__name {
+        .shop-logo {
             margin-left: 35px;
         }
 
@@ -56,9 +56,9 @@ body {
     @media screen and (max-width: 480px){
         margin: 10px auto 0;
 
-        &__name,
         &__phoneNumber {
             font-size: 18px;
+            min-width: 220px;
         }
 
         &__img {
@@ -131,6 +131,13 @@ body {
 
 /// MAIN CONTENT
 
+// ТЕКУЩАЯ СТРАНИЦА
+.current_directory {
+    a {
+        color: @text_color;
+    }
+}
+
 // ПРОДУКТ
 .product {
     max-width: 1400px;
@@ -142,17 +149,15 @@ body {
         float: left;
         margin-top: 50px;
 
-        // ТЕКУЩАЯ СТРАНИЦА
-        .current_directory {
-            a {
-                color: @text_color;
-            }
+        #shirt {
+            position: relative;
         }
 
         // ФОТО
         .photo {
             margin-top: 20px;
             position: absolute;
+            max-width: 100%;
 
             &_three_invisible,
             &_two_invisible,
