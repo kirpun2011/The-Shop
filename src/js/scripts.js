@@ -25,32 +25,32 @@ function L() {
 
 // ПЕРЕКЛЮЧЕНИЕ ЦВЕТОВ
 
-color_white.addEventListener("click", white);
-color_yellow.addEventListener("click", yellow);
-color_green.addEventListener("click", green);
+colorWhite.addEventListener("click", white);
+colorYellow.addEventListener("click", yellow);
+colorGreen.addEventListener("click", green);
 
 function white() {
-    color_white.className = "color_one active";
-    color_yellow.className = "color_two";
-    color_green.className = "color_three";
+    colorWhite.className = "color_one active";
+    colorYellow.className = "color_two";
+    colorGreen.className = "color_three";
     tshirtOne.className = "photo photo_one";
     tshirtTwo.className = "photo photo_two_invisible";
     tshirtThree.className = "photo photo_three_invisible";
 }
 
 function yellow() {
-    color_white.className = "color_one";
-    color_yellow.className = "color_two active";
-    color_green.className = "color_three";
+    colorWhite.className = "color_one";
+    colorYellow.className = "color_two active";
+    colorGreen.className = "color_three";
     tshirtOne.className = "photo photo_one_invisible";
     tshirtTwo.className = "photo photo_two";
     tshirtThree.className = "photo photo_three_invisible";
 }
 
 function green() {
-    color_white.className = "color_one";
-    color_yellow.className = "color_two";
-    color_green.className = "color_three active";
+    colorWhite.className = "color_one";
+    colorYellow.className = "color_two";
+    colorGreen.className = "color_three active";
     tshirtOne.className = "photo photo_one_invisible";
     tshirtTwo.className = "photo photo_two_invisible";
     tshirtThree.className = "photo photo_three";

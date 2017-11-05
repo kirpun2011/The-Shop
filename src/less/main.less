@@ -36,11 +36,15 @@ body {
         margin-right: 110px;
     }
 
-    &__phoneNumber {
+    .phone-number {
         font-size: 24px;
         font-weight: bold;
         color: @text_color;
         padding-top: 10px;
+    }
+
+    .oggetto-logo {
+        height: 50px;
     }
 
     @media screen and (max-width: 1500px){
@@ -48,7 +52,7 @@ body {
             margin-left: 35px;
         }
 
-        &__phoneNumber {
+        .phone-number {
             margin-right: 35px;
         }
     }
@@ -56,12 +60,12 @@ body {
     @media screen and (max-width: 480px){
         margin: 10px auto 0;
 
-        &__phoneNumber {
+        .phone-number {
             font-size: 18px;
             min-width: 220px;
         }
 
-        &__img {
+        .oggetto-logo {
             height: 40px;
         }
     }
@@ -83,30 +87,30 @@ body {
     &__wrapper {
         max-width: 1400px;
         margin: 0 auto;
+    }
 
-        li {
-            float: left;
-            margin-right: 20px;
-            padding-top: 15px;
+    &__item {
+        float: left;
+        margin-right: 20px;
+        padding-top: 15px;
 
-            .link {
-                color: @text_color;
-            }
-
-            .current-link {
-                color: black;
-                font-weight: bold;
-            }
+        .current-link {
+            color: black;
+            font-weight: bold;
         }
+    }
 
-        .menu__search {
-            height: 36px;
-            width: 276px;
-            border: 1px solid @border_color;
-            margin-top: 6px;
-            float: right;
-            cursor: pointer;
-        }
+    &__link {
+        color: @text_color;
+    }
+
+    &__search {
+        height: 36px;
+        width: 276px;
+        border: 1px solid @border_color;
+        margin-top: 6px;
+        float: right;
+        cursor: pointer;
     }
 
     // МЕДИА НА ШАПКУ
@@ -132,8 +136,14 @@ body {
 /// MAIN CONTENT
 
 // ТЕКУЩАЯ СТРАНИЦА
-.current_directory {
-    a {
+.current-directory {
+    &_wrapper {
+        max-width: 1400px;
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+
+    &__link {
         color: @text_color;
     }
 }
@@ -141,13 +151,13 @@ body {
 // ПРОДУКТ
 .product {
     max-width: 1400px;
-    margin: 0 auto;
+    margin: 20px auto 0;
 
     // ФОТО И ТЕКУЩАЯ СТРАНИЦА
     &__photo {
         width: 50%;
         float: left;
-        margin-top: 50px;
+        //margin-top: 50px;
 
         #shirt {
             position: relative;
@@ -155,7 +165,6 @@ body {
 
         // ФОТО
         .photo {
-            margin-top: 20px;
             position: absolute;
             max-width: 100%;
 
@@ -176,32 +185,30 @@ body {
     // ОПИСАНИЕ
     &__description {
         width: 45%;
-        float: left;
+        float: right;
         margin-left: 5%;
-        margin-top: 86px;
+    }
 
-        // НАЗВАНИЕ ПРОДУКТА
-        &_name {
-            font-size: 36px;
-            font-weight: bold;
-            margin-top: 0;
-        }
+    // НАЗВАНИЕ ПРОДУКТА
+    &__title {
+        font-size: 36px;
+        font-weight: bold;
+        margin-top: 0;
+    }
 
-        // СОСТАВ
-        &_consist {
-            font-weight: normal;
-            font-size: 16px;
-            display: block;
-            margin-top: 16px;
-        }
+    // СОСТАВ
+    &__consist {
+        font-weight: normal;
+        font-size: 16px;
+        display: block;
+    }
 
-        // ЦЕНА
-        &_price {
-            color: @text_color;
-            display: block;
-            margin-top: 33px;
-            margin-bottom: 36px;
-        }
+    // ЦЕНА
+    &__price {
+        color: @text_color;
+        display: block;
+        margin-top: 33px;
+        margin-bottom: 36px;
     }
 
     // РАЗМЕР
@@ -235,6 +242,12 @@ body {
             border: 3px solid red;
             line-height: 59px;
         }
+
+        &::after {
+            content: '';
+            display: table;
+            clear: both;
+        }
     }
 
     // ЦВЕТ
@@ -243,7 +256,7 @@ body {
             display: block;
             margin-bottom: 16px;
             clear: left;
-            margin-top: 116px;
+            margin-top: 38px;
             font-weight: normal;
             cursor: auto;
         }
@@ -279,19 +292,24 @@ body {
             width: 59px;
             border: 3px solid red;
         }
+
+        &::after {
+            content: '';
+            display: table;
+            clear: both;
+        }
     }
 
     // КНОПКА
     input[type='button'] {
         display: block;
-        margin-top: 123px;
+        margin-top: 44px;
         height: 79px;
         width: 202px;
         color: @main_color;
         background-color: @text_color;
         border: none;
         cursor: pointer;
-
         &:hover {
             background: lighten(@text_color, 15%);
         }
@@ -322,73 +340,100 @@ footer {
     clear: both;
     border-top: 1px solid @border_color;
     margin-top: 910px;
+}
 
-    .footer {
-        max-width: 1400px;
-        margin: 0 auto;
+.footer {
+    max-width: 1400px;
+    margin: 0 auto;
+
+    &__service {
+        width: 430px;
+        float: left;
+        margin-top: 62px;
+        margin-bottom: 54px;
     }
+
+    &__about {
+        width: 276px;
+        float: left;
+        margin-top: 62px;
+    }
+
+    &__name-service-about {
+        display: block;
+        margin-bottom: 25px;
+        font-size: 16px;
+    }
+
+    &__first-list-service {
+        float: left;
+        margin-right: 54px;
+    }
+
+    &__first-list-about {
+        float: left;
+        margin-right: 103px;
+    }
+
+    &__item {
+        display: block;
+        margin-bottom: 13px;
+        font-size: 14px;
+    }
+
+    &__link {
+        color: black;
+        text-decoration: none;
+    }
+
+    &__features {
+        width: 424px;
+        float: left;
+        margin-top: 62px;
+        padding-left: 233px;
+    }
+
+    &__fitem {
+        display: block;
+        font-size: 14px;
+        margin-bottom: 11px;
+    }
+
+    &__soc-icons {
+        width: 37px;
+        float: left;
+        margin-top: 62px;
+    }
+
+    &__soc-icon {
+        height: 30px;
+    }
+
+    &__soc-icon.facebook {
+        margin-left: 8px;
+        margin-bottom: 23px;
+    }
+
+    &__soc-icon.twitter {
+        margin-bottom: 22px;
+    }
+
+    &__soc-icon.instagram {
+        margin-left: 3px;
+    }
+
+    &__rights {
+        clear: both;
+        width: 1400px;
+        margin: 0 auto;
+        border-top: 1px solid @border_color;
+        padding-top: 34px;
+        font-size: 14px;
+    }
+
 }
 
-.service {
-    width: 430px;
-    float: left;
-    margin-top: 62px;
-    margin-bottom: 54px;
-}
-
-.name_service_about {
-    display: block;
-    margin-bottom: 25px;
-    font-size: 16px;
-}
-
-.service li {
-    display: block;
-    margin-bottom: 13px;
-    font-size: 14px;
-}
-
-.firstListService {
-    float: left;
-    margin-right: 54px;
-}
-
-.about {
-    width: 276px;
-    float: left;
-    margin-top: 62px;
-}
-
-.firstListAbout {
-    float: left;
-    margin-right: 103px;
-}
-
-.about li {
-    display: block;
-    margin-bottom: 13px;
-    font-size: 14px;
-}
-
-.about li a {
-    color: black;
-    text-decoration: none;
-}
-
-.features {
-    width: 424px;
-    float: left;
-    margin-top: 62px;
-    padding-left: 233px;
-}
-
-.features li {
-    display: block;
-    font-size: 14px;
-    margin-bottom: 11px;
-}
-
-.icon1::before {
+.icon-letter::before {
     content: '';
     background: url('../img/icons/delivery.svg') no-repeat;
     transform: translateX(-55px) translateY(18px);
@@ -396,7 +441,7 @@ footer {
     height: 23px;
 }
 
-.icon2::before {
+.icon-heart::before {
     content: '';
     background: url('../img/icons/heart.svg') no-repeat;
     transform: translateX(-35px) translateY(19px);
@@ -404,42 +449,10 @@ footer {
     height: 23px;
 }
 
-.icon3::before {
+.icon-cup::before {
     content: '';
     background: url('../img/icons/cup.svg') no-repeat;
     transform: translateX(-30px) translateY(19px);
     display: block;
     height: 23px;
-}
-
-.icons {
-    width: 37px;
-    float: left;
-    margin-top: 62px;
-}
-
-.socialIcon {
-    height: 30px;
-}
-
-.socialIcon.facebook {
-    margin-left: 8px;
-    margin-bottom: 23px;
-}
-
-.socialIcon.twitter {
-    margin-bottom: 22px;
-}
-
-.socialIcon.instagram {
-    margin-left: 3px;
-}
-
-.rights {
-    clear: both;
-    width: 1400px;
-    margin: 0 auto;
-    border-top: 1px solid @border_color;
-    padding-top: 34px;
-    font-size: 14px;
 }
