@@ -113,6 +113,7 @@ body {
         margin-top: 6px;
         float: right;
         cursor: pointer;
+        padding-left: 10px;
     }
 
     // МЕДИА НА ШАПКУ
@@ -128,6 +129,7 @@ body {
 
     @media screen and (max-width: 690px){
         height: 85px;
+        min-width: 430px;
 
         .menu__wrapper{
             max-width: 690px;
@@ -139,8 +141,6 @@ body {
             margin-right: 5%;
             width: 90%;
         }
-
-        min-width: 430px;
     }
 }
 
@@ -151,10 +151,20 @@ body {
     &_wrapper {
         max-width: 1400px;
         margin: 50px auto 0;
+
+        @media screen and (max-width: 680px){
+            margin-top: 25px;
+        }
     }
 
     &__link {
         color: @text_color;
+    }
+
+    @media only screen and (max-width: 1500px){
+        padding: 0;
+        margin-left: 35px;
+        margin-right: 35px;
     }
 }
 
@@ -163,10 +173,15 @@ body {
     max-width: 1400px;
     margin: 20px auto 0;
 
+    .ph {
+        display: none;
+    }
+
     // ФОТО И ТЕКУЩАЯ СТРАНИЦА
     &__photo {
         width: 50%;
         float: left;
+        //background-color: gold;
 
         #shirt {
             position: relative;
@@ -176,6 +191,8 @@ body {
         .photo {
             position: absolute;
             max-width: 100%;
+
+
 
             &_three_invisible,
             &_two_invisible,
@@ -188,6 +205,33 @@ body {
             &_one {
                 opacity: 1;
             }
+
+            @media only screen and (max-width: 1500px){
+                width: 90%;
+            }
+
+            @media only screen and (max-width: 1000px){
+                min-width: 300px;
+            }
+
+            @media only screen and (max-width: 690px){
+                width: 95%;
+                min-width: 370px;
+            }
+        }
+
+        @media only screen and (max-width: 1500px){
+            margin-left: 35px;
+            width: 45%;
+        }
+
+        @media only screen and (max-width: 690px){
+            width: 90%;
+
+            .ph {
+                display: block;
+                margin-bottom: 10px;
+            }
         }
     }
 
@@ -195,7 +239,35 @@ body {
     &__description {
         width: 45%;
         float: right;
-        margin-left: 5%;
+
+        @media only screen and (max-width: 1500px){
+            margin-right: 35px;
+        }
+
+        @media only screen and (max-width: 690px){
+            width: 90%;
+            margin-left: 35px;
+            margin-right: 35px;
+            margin-top: 550px;
+            clear: both;
+        }
+
+        @media only screen and (max-width: 610px){
+            margin-top: 480px;
+        }
+
+        @media only screen and (max-width: 550px){
+            margin-top: 430px;
+        }
+
+        @media only screen and (max-width: 480px){
+            margin-top: 390px;
+            min-width: 388px;
+        }
+
+        @media only screen and (max-width: 430px){
+            margin-top: 350px;
+        }
     }
 
     // НАЗВАНИЕ ПРОДУКТА
@@ -203,6 +275,10 @@ body {
         font-size: 36px;
         font-weight: bold;
         margin-top: 0;
+
+        @media only screen and (max-width: 1000px){
+            font-size: 24px;
+        }
     }
 
     // СОСТАВ
@@ -210,6 +286,10 @@ body {
         font-weight: normal;
         font-size: 16px;
         display: block;
+
+        @media only screen and (max-width: 1000px){
+            font-size: 14px;
+        }
     }
 
     // ЦЕНА
@@ -218,17 +298,42 @@ body {
         display: block;
         margin-top: 33px;
         margin-bottom: 36px;
+
+        @media only screen and (max-width: 1000px){
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        @media only screen and (max-width: 690px){
+            text-align: center;
+            margin-top: 50px;
+        }
     }
 
     // РАЗМЕР
     .size {
         cursor: pointer;
+        //background-color: gold;
+        @media only screen and (max-width: 690px){
+            float: left;
+            margin-left: 35px;
+            margin-right: 5px;
+        }
+
+        @media only screen and (max-width: 480px){
+            width: 167px;
+        }
 
         &__name {
             display: block;
             margin-bottom: 16px;
             font-weight: normal;
             cursor: auto;
+
+            @media only screen and (max-width: 1000px){
+                font-size: 16px;
+                margin-bottom: 10px;
+            }
         }
 
         &_style {
@@ -241,6 +346,13 @@ body {
             font-size: 36px;
             line-height: 63px;
             float: left;
+
+            @media only screen and (max-width: 1000px){
+                height: 43px;
+                width: 43px;
+                line-height: 43px;
+                font-size: 20px;
+            }
         }
 
         &_S.active,
@@ -250,6 +362,13 @@ body {
             width: 59px;
             border: 3px solid red;
             line-height: 59px;
+
+            @media only screen and (max-width: 1000px){
+                height: 39px;
+                width: 39px;
+                line-height: 39px;
+                font-size: 20px;
+            }
         }
 
         &::after {
@@ -259,15 +378,40 @@ body {
         }
     }
 
+    @media only screen and (max-width: 690px){
+        .desc {
+            display: none;
+        }
+    }
+
     // ЦВЕТ
     .color {
+        margin-top: 38px;
+        @media only screen and (max-width: 1000px){
+            margin-top: 20px;
+        }
+
+        @media only screen and (max-width: 690px){
+            width: 40%;
+            float: right;
+            margin-top: 0;
+        }
+
+        @media only screen and (max-width: 480px){
+            width: 167px;
+        }
+
         &__name {
             display: block;
             margin-bottom: 16px;
             clear: left;
-            margin-top: 38px;
             font-weight: normal;
             cursor: auto;
+
+            @media only screen and (max-width: 1000px){
+                font-size: 16px;
+                margin-bottom: 10px;
+            }
         }
 
         &_one,
@@ -280,6 +424,13 @@ body {
             margin-right: 10px;
             float: left;
             cursor: pointer;
+
+            @media only screen and (max-width: 1000px){
+                height: 43px;
+                width: 43px;
+                line-height: 43px;
+                font-size: 20px;
+            }
         }
 
         &_one {
@@ -300,6 +451,13 @@ body {
             height: 59px;
             width: 59px;
             border: 3px solid red;
+
+            @media only screen and (max-width: 1000px){
+                height: 39px;
+                width: 39px;
+                line-height: 39px;
+                font-size: 20px;
+            }
         }
 
         &::after {
@@ -322,6 +480,27 @@ body {
 
         &:hover {
             background: lighten(@text_color, 15%);
+        }
+
+        @media only screen and (max-width: 1000px){
+            margin-top: 20px;
+            margin-bottom: 13px;
+            width: 155px;
+            height: 53px;
+        }
+
+        @media only screen and (max-width: 690px){
+            margin: 0 auto;
+        }
+
+        @media only screen and (max-width: 430px) {
+            margin-left: 120px;
+        }
+    }
+
+    @media only screen and (max-width: 690px){
+        .product__form {
+            margin-top: 120px;
         }
     }
 
@@ -350,6 +529,18 @@ footer {
     clear: both;
     border-top: 1px solid @border_color;
     margin-top: 910px;
+
+    @media only screen and (max-width: 1500px){
+        margin-top: 800px;
+    }
+
+    @media only screen and (max-width: 1000px){
+        margin-top: 500px;
+    }
+
+    @media only screen and (max-width: 690px){
+        margin-top: 930px;
+    }
 }
 
 .footer {
@@ -434,7 +625,7 @@ footer {
 
     &__rights {
         clear: both;
-        width: 1400px;
+        max-width: 1400px;
         margin: 0 auto;
         border-top: 1px solid @border_color;
         padding-top: 34px;
