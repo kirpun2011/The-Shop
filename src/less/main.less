@@ -181,7 +181,6 @@ body {
     &__photo {
         width: 50%;
         float: left;
-        //background-color: gold;
 
         #shirt {
             position: relative;
@@ -191,8 +190,6 @@ body {
         .photo {
             position: absolute;
             max-width: 100%;
-
-
 
             &_three_invisible,
             &_two_invisible,
@@ -308,6 +305,10 @@ body {
             text-align: center;
             margin-top: 50px;
         }
+
+        @media only screen and (max-width: 430px){
+            margin-left: 20px;
+        }
     }
 
     // РАЗМЕР
@@ -316,8 +317,12 @@ body {
         //background-color: gold;
         @media only screen and (max-width: 690px){
             float: left;
-            margin-left: 35px;
+            margin-left: 65px;
             margin-right: 5px;
+        }
+
+        @media only screen and (max-width: 610px){
+            margin-left: 40px;
         }
 
         @media only screen and (max-width: 480px){
@@ -494,7 +499,7 @@ body {
         }
 
         @media only screen and (max-width: 430px) {
-            margin-left: 120px;
+            margin-left: 130px;
         }
     }
 
@@ -510,12 +515,34 @@ body {
             margin-top: 39px;
             margin-bottom: -7px;
             margin-right: 6px;
+
+            @media only screen and (max-width: 1000px) {
+                margin-top: 10px;
+            }
         }
 
         a {
             color: #999;
             font-size: 16px;
             display: inline-block;
+        }
+
+        @media only screen and (max-width: 690px){
+            width: 50%;
+            margin: 0 auto;
+            padding-left: 120px;
+        }
+
+        @media only screen and (max-width: 610px){
+            padding-left: 90px;
+        }
+
+        @media only screen and (max-width: 550px){
+            padding-left: 70px;
+        }
+
+        @media only screen and (max-width: 480px){
+            padding-left: 40px;
         }
     }
 }
@@ -525,7 +552,7 @@ footer {
     background-color: #f2f2ed;
     color: black;
     font-size: 16px;
-    height: 429px;
+    min-height: 429px;
     clear: both;
     border-top: 1px solid @border_color;
     margin-top: 910px;
@@ -539,31 +566,89 @@ footer {
     }
 
     @media only screen and (max-width: 690px){
-        margin-top: 930px;
+        margin-top: 950px;
+    }
+
+    @media only screen and (max-width: 610px){
+        margin-top: 920px;
+    }
+
+    @media only screen and (max-width: 550px){
+        margin-top: 860px;
+    }
+
+    @media only screen and (max-width: 480px){
+        margin-top: 820px;
+    }
+
+    @media only screen and (max-width: 430px){
+        margin-top: 780px;
     }
 }
 
 .footer {
     max-width: 1400px;
     margin: 0 auto;
+    min-width: 430px;
+    //border-bottom: 1px solid @border_color;
 
     &__service {
-        width: 430px;
+        width: 30%;
         float: left;
         margin-top: 62px;
         margin-bottom: 54px;
+
+        @media only screen and (max-width: 1500px){
+            width: 20%;
+            margin-left: 35px;
+            margin-right: 100px;
+        }
+
+        @media only screen and (max-width: 980px){
+            margin-right: 60px;
+        }
+
+        @media only screen and (max-width: 850px){
+            width: 40%;
+            margin-right: 60px;
+        }
+
+        @media only screen and (max-width: 500px){
+            margin-left: 50px;
+            margin-right: 40px;
+        }
     }
 
     &__about {
-        width: 276px;
+        width: 36%;
         float: left;
         margin-top: 62px;
+
+        @media only screen and (max-width: 980px){
+            width: 38%;
+        }
+
+        @media only screen and (max-width: 730px){
+            width: 32%;
+        }
+
+        @media only screen and (max-width: 850px){
+            width: 40%;
+        }
+
+        @media only screen and (max-width: 450px){
+            width: 35%;
+        }
     }
 
     &__name-service-about {
         display: block;
         margin-bottom: 25px;
         font-size: 16px;
+
+        @media only screen and (max-width: 850px){
+            font-size: 14px;
+        }
     }
 
     &__first-list-service {
@@ -574,12 +659,30 @@ footer {
     &__first-list-about {
         float: left;
         margin-right: 103px;
+
+        @media only screen and (max-width: 1500px){
+            margin-right: 54px;
+        }
+    }
+
+    &__second-list-about {
+        @media only screen and (max-width: 1500px){
+            margin-right: 60px;
+        }
+
+        @media only screen and (max-width: 850px){
+            margin-right: 10px;
+        }
     }
 
     &__item {
         display: block;
         margin-bottom: 13px;
         font-size: 14px;
+
+        @media only screen and (max-width: 850px){
+            font-size: 12px;
+        }
     }
 
     &__link {
@@ -588,10 +691,18 @@ footer {
     }
 
     &__features {
-        width: 424px;
+        width: 30%;
         float: left;
         margin-top: 62px;
-        padding-left: 233px;
+
+        @media only screen and (max-width: 1500px){
+            width: 25%;
+            margin-right: 50px;
+        }
+
+        @media only screen and (max-width: 860px){
+            display: none;
+        }
     }
 
     &__fitem {
@@ -601,9 +712,13 @@ footer {
     }
 
     &__soc-icons {
-        width: 37px;
+        width: 2.6%;
         float: left;
         margin-top: 62px;
+
+        @media only screen and (max-width: 1130px){
+            display: none;
+        }
     }
 
     &__soc-icon {
@@ -630,6 +745,15 @@ footer {
         border-top: 1px solid @border_color;
         padding-top: 34px;
         font-size: 14px;
+
+        @media only screen and (max-width: 1500px){
+            margin-left: 35px;
+            margin-right: 35px;
+        }
+
+        @media only screen and (max-width: 850px){
+            font-size: 12px;
+        }
     }
 }
 
