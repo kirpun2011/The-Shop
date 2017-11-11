@@ -173,10 +173,6 @@ body {
     max-width: 1400px;
     margin: 20px auto 0;
 
-    .ph {
-        display: none;
-    }
-
     // ФОТО И ТЕКУЩАЯ СТРАНИЦА
     &__photo {
         width: 50%;
@@ -186,35 +182,13 @@ body {
             position: relative;
         }
 
+        .hidden {
+            display: none;
+        }
+
         // ФОТО
         .photo {
-            position: absolute;
             max-width: 100%;
-
-            &_three_invisible,
-            &_two_invisible,
-            &_one_invisible {
-                opacity: 0;
-            }
-
-            &_three,
-            &_two,
-            &_one {
-                opacity: 1;
-            }
-
-            @media only screen and (max-width: 1500px){
-                width: 90%;
-            }
-
-            @media only screen and (max-width: 1000px){
-                min-width: 300px;
-            }
-
-            @media only screen and (max-width: 690px){
-                width: 95%;
-                min-width: 370px;
-            }
         }
 
         @media only screen and (max-width: 1500px){
@@ -225,9 +199,9 @@ body {
         @media only screen and (max-width: 690px){
             width: 90%;
 
-            .ph {
+            .hidden {
                 display: block;
-                margin-bottom: 10px;
+                margin-bottom: 15px;
             }
         }
     }
@@ -245,26 +219,7 @@ body {
             width: 90%;
             margin-left: 35px;
             margin-right: 35px;
-            margin-top: 550px;
             clear: both;
-        }
-
-        @media only screen and (max-width: 610px){
-            margin-top: 480px;
-        }
-
-        @media only screen and (max-width: 550px){
-            margin-top: 430px;
-        }
-
-        @media only screen and (max-width: 480px){
-            margin-top: 390px;
-            margin-right: 25px;
-            min-width: 380px;
-        }
-
-        @media only screen and (max-width: 430px){
-            margin-top: 350px;
         }
     }
 
@@ -287,6 +242,12 @@ body {
 
         @media only screen and (max-width: 1000px){
             font-size: 14px;
+        }
+    }
+
+    @media only screen and (max-width: 690px){
+        .desc {
+            display: none;
         }
     }
 
@@ -315,7 +276,7 @@ body {
     // РАЗМЕР
     .size {
         cursor: pointer;
-        //background-color: gold;
+
         @media only screen and (max-width: 690px){
             float: left;
             margin-left: 65px;
@@ -384,15 +345,10 @@ body {
         }
     }
 
-    @media only screen and (max-width: 690px){
-        .desc {
-            display: none;
-        }
-    }
-
     // ЦВЕТ
     .color {
         margin-top: 38px;
+
         @media only screen and (max-width: 1000px){
             margin-top: 20px;
         }
@@ -591,7 +547,6 @@ footer {
     max-width: 1400px;
     margin: 0 auto;
     min-width: 430px;
-    //border-bottom: 1px solid @border_color;
 
     &__service {
         width: 30%;
