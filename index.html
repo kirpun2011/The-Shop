@@ -1,0 +1,148 @@
+<!--test-->
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Магазин 7h3 5h0p</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <div class="shop-logo"></div>
+        <div class="header__logo"><img class="oggetto-logo" src="img/oggetto_logo.svg" alt=""></a></div>
+        <div class="phone-number">+7 (812) 2•12•85•06</div>
+    </div>
+
+    <main>
+        <div class="menu">
+            <div class="menu__wrapper">
+                <ul class="menu__list">
+                    <li class="menu__item"><span class="menu__link current-link">LISP</span></li>
+                    <li class="menu__item"><a class="menu__link" href="">OCaml</a></li>
+                    <li class="menu__item"><a class="menu__link" href="">JavaScript</a></li>
+                    <li class="menu__item"><a class="menu__link" href="">Python</a></li>
+                    <li class="menu__item"><a class="menu__link" href="">PHP</a></li>
+                </ul>
+
+                <form action="" class="menu__form">
+                    <input class="menu__search" type="search">
+                </form>
+            </div>
+        </div>
+
+        <div class="current-directory">
+            <div class="current-directory_wrapper">
+                <a class="current-directory__link" href="">LISP</a> / <a class="current-directory__link" href="">Одежда</a> / Футболки
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product__photo">
+                <div id="shirt">
+                    <h1 class="product__title hidden">Футболка Alien technology</h1>
+                    <h4 class="product__consist hidden">Состав: 100% хлопок, динамическая типизация, польская нотация. Производство: Россия.</h4>
+
+                    <img id="productPicture" src="img/tshirts/tshirt_white.jpg" class="photo photo_one">
+                </div>
+            </div>
+
+            <div class="product__description">
+                <h1 class="product__title desc">Футболка Alien technology</h1>
+                <h4 class="product__consist desc">Состав: 100% хлопок, динамическая типизация, польская нотация. Производство: Россия.</h4>
+
+                <h1 class="product__price">1500&#8381</h1>
+
+                <div class="size">
+                    <h4 class="size__name">Размер:</h4>
+
+                    <div id="sizeList" class="size__line-block">
+                        <div id="sizeS" data-size="s" class="size_style size_S">S</div>
+                        <div id="sizeM" data-size="m" class="size_style size_M active">M</div>
+                        <div id="sizeL" data-size="l" class="size_style size_L">L</div>
+                    </div>
+                </div>
+
+                <div class="color">
+                    <h4 class="color__name">Цвет:</h4>
+
+                    <div  id="colorList">
+                        <div id="colorWhite" data-color="white" class="color_one active"> </div>
+                        <div id="colorYellow" data-color="yellow" class="color_two"> </div>
+                        <div id="colorGreen" data-color="green" class="color_three"> </div>
+                    </div>
+                </div>
+
+                <form action="" class="product__form">
+                    <input type="button" value="Купить">
+                </form>
+
+                <div class="for-future">
+                    <a href=""><img class="heart-svg1" src="img/icons/heart2.svg" alt="heart" height="25px"></a>
+                    <a href="">Отложить на потом</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <div class="footer__service">
+                <h3 class="footer__name-service-about">Сервис и поддержка</h3>
+                <ul class="footer__list">
+                    <div class="footer__first-list-service">
+                        <li class="footer__item"><a class="footer__link" href="">Как сделать заказ</a></li>
+                        <li class="footer__item"><a class="footer__link" href="">Возврат товара</a></li>
+                        <li class="footer__item"><a class="footer__link" href="">Публичная оферта</a></li>
+                        <li class="footer__item"><a class="footer__link" href="">Доставка</a></li>
+                    </div>
+                    <div class="footer__second-list-service">
+                        <li class="footer__item"><a class="footer__link" href="">Способы оплаты</a></li>
+                        <li class="footer__item"><a class="footer__link" href="">Правила продажи</a></li>
+                        <li class="footer__item"><a class="footer__link" href="">Возврат денежных средств</a></li>
+                        <li class="footer__item"><a class="footer__link" href="">Вопросы и ответы</a></li>
+                    </div>
+                </ul>
+            </div>
+            <div class="footer__about">
+                <h3 class="footer__name-service-about">О компании</h3>
+                <ul class="footer__list">
+                    <div class="footer__first-list-about">
+                        <li class="footer__item"><a class="footer__link" href="">О нас</a></li>
+                        <li class="footer__item"><a class="footer__link" href="">Контакты</a></li>
+                        <li class="footer__item"><a class="footer__link" href="">Вакансии</a></li>
+                        <li class="footer__item"><a class="footer__link" href="">Партнерам</a></li>
+                    </div>
+                    <div class="footer__second-list-about">
+                        <li class="footer__item"><a class="footer__link" href="">Сертификаты</a></li>
+                        <li class="footer__item"><a class="footer__link" href="">Преимущества</a></li>
+                        <li class="footer__item"><a class="footer__link" href="">Наши скидки</a></li>
+                    </div>
+                </ul>
+            </div>
+            <div class="footer__features">
+                <ul class="footer__flist">
+                    <li class="footer__fitem"><span class="icon-letter">бесплатная доставка от 4000 ₽</span></li>
+                    <li class="footer__fitem"><span class="icon-heart">пробники в подарок при каждой покупке</span></li>
+                    <li class="footer__fitem"><span class="icon-cup">акции и подарки за покупку</span></li>
+                </ul>
+            </div>
+            <div class="footer__soc-icons">
+                <a href="http://facebook.com"><img class="footer__soc-icon facebook" src="img/icons/facebook.svg" alt=""></a>
+                <a href="http://twitter.com"><img class="footer__soc-icon twitter" src="img/icons/twitter.svg" alt=""></a>
+                <a href="http://instagram.com"><img class="footer__soc-icon instagram" src="img/icons/instagram.svg" alt=""></a>
+            </div>
+
+            <div class="footer__rights">
+                2005-2017 © 7h35h0p.ru — модный интернет-магазин одежды, обуви и аксессуаров. <br>
+                Все права защищены. Доставка по всей России!
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>
